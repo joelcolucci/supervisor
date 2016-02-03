@@ -18,15 +18,14 @@ Create a new file within the `/etc/supervisor/conf.d/` directory named for
 your app. Example: myapp.conf.
 
 ### Filling out the configuration file
+Example:
 ```
 [program:myapp]
-environment=
-
 command=/home/myusername/code/myproject/venv/bin/gunicorn myapp:app
 
-directory=/home/deployer/cyoa
+directory=/home/myusername/code/myapp
 
-user=deployer
+user=myusername
 
 autostart=true
 
